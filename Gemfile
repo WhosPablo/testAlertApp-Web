@@ -32,8 +32,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Environment variables
+gem 'figaro'
+
 # Users Authentication with devise and Oauth with omniauth
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-windowslive'
 
 # User Token Authentication for devise
