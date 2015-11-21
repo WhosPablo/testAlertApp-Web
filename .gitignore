@@ -15,3 +15,28 @@
 /log/*
 !/log/.keep
 /tmp
+
+# TODO Comment out these rules if you are OK with secrets being uploaded to the repo
+config/initializers/secret_token.rb
+config/secrets.yml
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+
+# if using bower-rails ignore default bower_components path bower.json files
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+# Ignore pow environment settings
+.powenv
+
+# Log Files
+*.log
+
+# Mac
+.DS_Store
+
+# Intellij
+.idea/
