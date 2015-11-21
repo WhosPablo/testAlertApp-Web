@@ -1,4 +1,17 @@
 Rails.application.configure do
+
+  # default url for ActionMailer, so Devise won't complain about delivering emails:
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Handle cross domain requests
+  config.middleware.insert_before 0, "Rack::Cors" do
+    allow do
+      origins '*'
+      resource '*', :headers => :any, :methods => [:get, :put, :delete, :post, :options]
+    end
+  end
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
