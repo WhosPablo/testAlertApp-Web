@@ -24,7 +24,7 @@ config/secrets.yml
 /.bundle
 /vendor/bundle
 
-# Ignore pow environment settings
+# Ignore pow environment settingsc
 .powenv
 
 # Log Files
