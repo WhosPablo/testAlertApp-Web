@@ -4,7 +4,6 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
       ## Required
       t.string :provider, :null => false, :default => "email"
       t.string :uid, :null => false, :default => ""
-      t.string :nickname
 
       ## Confirmable
       t.string   :confirmation_token
@@ -16,6 +15,12 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
       # t.integer  :failed_attempts, :default => 0, :null => false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
+
+      ## User Info
+      t.string :name
+      t.string :nickname
+      t.string :image
+
 
       ## Tokens
       t.text :tokens
