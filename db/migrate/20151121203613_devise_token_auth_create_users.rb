@@ -4,6 +4,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
       ## Required
       t.string :provider, :null => false, :default => "email"
       t.string :uid, :null => false, :default => ""
+      t.string :nickname
 
       ## Confirmable
       t.string   :confirmation_token
@@ -18,6 +19,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration
 
       ## Tokens
       t.text :tokens
+
 
     end
 
