@@ -48,7 +48,7 @@ group :development, :test do
   gem 'byebug'
 
   # Rack::Cors provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
-  gem 'rack-cors', :require => 'rack/cors'
+  # gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :development do
