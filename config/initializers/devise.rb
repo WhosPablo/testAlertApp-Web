@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'b81f8ccceb6b91ad32056bbc14583bc68895fbd423041d452023aae6f4bcc9f3fae86c3662b5082620b78a3a1a111f823cd80744a5a43d00bc1f001bc056f5bf'
+  config.secret_key = 'b81f8ccceb6b91ad32056bbc14583bc68895fbd423041d452023aae6f4bcc9f3fae86c3662b5082620b78a3a1a111f823cd80744a5a43d00bc1f001bc056f5bf'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -236,6 +236,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :windowslive, ENV['WINDOWSLIVE_CLIENT_ID'], ENV['WINDOWSLIVE_SECRET']
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
