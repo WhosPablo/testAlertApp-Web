@@ -69,6 +69,19 @@ class AlertsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alert_params
-      params.require(:alert).permit(:title, :content)
+      @parameters = params.require(:alert).permit(:summary, :details, :priority)
+
+      case @parameters['priority']
+        when 'High'
+          @parameters['style'] = 'assertive'
+        when 'Medium'
+          @parameters['style'] = 'energized'
+        when 'Low'
+          @parameters['style'] = 'balanced'
+        else
+          @parameters['style'] = 'balanced'
+      end
+
+      @parameters
     end
 end

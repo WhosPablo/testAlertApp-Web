@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20151121203613) do
   enable_extension "plpgsql"
 
   create_table "alerts", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
+    t.string   "summary"
+    t.text     "details"
+    t.string   "style"
+    t.string   "priority"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,6 +44,9 @@ ActiveRecord::Schema.define(version: 20151121203613) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "image"
     t.text     "tokens"
   end
 

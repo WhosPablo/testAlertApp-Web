@@ -1,1 +1,1 @@
-json.extract! @alert, :id, :title, :content, :created_at, :updated_at
+json.extract! @alert, :id, :summary, :details, :priority, :style, :created_at, :updated_at

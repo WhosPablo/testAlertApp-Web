@@ -1,8 +1,11 @@
 class CreateAlerts < ActiveRecord::Migration
   def change
     create_table :alerts do |t|
-      t.string :title
-      t.text :content
+      t.string :summary
+      t.text :details
+
+      t.string :style
+      t.string :priority
 
       t.timestamps null: false
     end

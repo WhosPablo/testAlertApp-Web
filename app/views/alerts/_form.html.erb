@@ -12,13 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :summary %><br>
+    <%= f.text_field :summary %>
   </div>
+
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <%= f.select(:priority, [['High', 'High'], ['Medium','Medium'], ['Low','Low']]) %>
   </div>
+
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_area :details %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
