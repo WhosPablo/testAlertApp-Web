@@ -35,5 +35,6 @@ config/secrets.yml
 
 # Intellij
 .idea/
+
 # Ignore application configuration
 /config/application.yml

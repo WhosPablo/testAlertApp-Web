@@ -6,8 +6,21 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module HostServer
+module Web
   class Application < Rails::Application
+
+
+    # Handle cross domain requests
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*',
+           :headers => :any,
+           :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+           :methods => [:get, :put, :delete, :post, :options]
+      end
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
