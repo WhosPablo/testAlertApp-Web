@@ -109,7 +109,6 @@ GEM
     orm_adapter (0.5.0)
     pg (0.18.4)
     rack (1.6.4)
-    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.5)
@@ -189,7 +188,6 @@ DEPENDENCIES
   omniauth
   omniauth-windowslive
   pg
-  rack-cors
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
