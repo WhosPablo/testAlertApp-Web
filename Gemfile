@@ -39,7 +39,6 @@ gem 'figaro'
 # Users Authentication with devise and Oauth with omniauth
 gem 'devise'
 gem 'omniauth-oauth2', '1.3.1'
-gem 'omniauth-windowslive'
 gem 'omniauth-google-oauth2'
 
 # User Token Authentication for devise
