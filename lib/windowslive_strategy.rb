@@ -1,5 +1,6 @@
-# lib/windowslive.rb
-require 'omniauth/core'
+# lib/windowslive_strategy.rb
+
+require 'omniauth'
 
 module OmniAuth
   module Strategies

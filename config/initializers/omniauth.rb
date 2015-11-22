@@ -1,8 +1,9 @@
 # config/initializers/omniauth.rb
+
 module OmniAuth
   module Strategies
     # tell OmniAuth to load our strategy
-    autoload :windowslive, 'lib/windowslive'
+    autoload :Windowslive, Rails.root.join('lib', 'windowslive_strategy')
   end
 end
 
