@@ -47,12 +47,12 @@ gem 'devise_token_auth'
 # Heroku
 gem 'rails_12factor'
 
+# Rack::Cors provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+gem 'rack-cors', :require => 'rack/cors'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Rack::Cors provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
-  # gem 'rack-cors', :require => 'rack/cors'
 end
 
 group :development do
